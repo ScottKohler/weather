@@ -1,0 +1,55 @@
+<h1> _search results partial begin</h1>
+
+<h3> Current Conditions </h3>
+Name:  <%=@location_name %>
+
+
+<p>Humidity: <%=@humidity %> <br>
+Temp:  <%=@temp_f %> <br>
+Wind: mph <%=@wind_mph %>
+
+</p>
+
+<h1>Cached Weather Reports</h1>
+<div class="row">
+  <div class="col-md-6">
+    <div class="container">
+
+      <table class="table" id="myTable">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Humidity</th>
+          <th>Temp(f)</th>
+          <th>Wind Speed</th>
+          <th>Zip Code</th>
+          <th>Location/th>
+          <th>Created At</th>
+          <th>Updated At</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @cached_reports.each do |weather| %>
+            <tr>
+              <td><%= weather.id %></td>
+              <td><%= weather.humidity %></td>
+              <td><%= weather.temp_f %></td>
+              <td><%= weather.wind_mph %></td>
+              <td><%= weather.zip_code %></td>
+              <td><%= weather.location_name %> </td>
+              <td><%= weather.created_at %></td>
+              <td><%= weather.updated_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+<h1> _search results partial end </h1>

@@ -1,0 +1,32 @@
+<h1>Weather Reports</h1>
+<div class="row">
+  <div class="col-md-6">
+    <div class="container">
+
+      <table class="table" id="myTable">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Response Text</th>
+          <th>Zip Code</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @weather_reports.each do |weather| %>
+            <tr>
+              <td><%= weather.id %></td>
+              <td><%= weather.response_text %></td>
+              <td><%= weather.zip_code %></td>
+              <td><%= weather.created_at %></td>
+              <td><%= weather.updated_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+

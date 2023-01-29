@@ -1,0 +1,65 @@
+
+result =
+{"location":{"name":"Rocky Point","region":"New York","country":"USA","lat":40.95,"lon":-72.94,"tz_id":"America/New_York","localtime_epoch":1674753068,"localtime":"2023-01-26 12:11"},"current":{"last_updated_epoch":1674752400,"last_updated":"2023-01-26 12:00","temp_c":7.2,"temp_f":45.0,"is_day":1,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png","code":1009},"wind_mph":13.6,"wind_kph":22.0,"wind_degree":260,"wind_dir":"W","pressure_mb":1000.0,"pressure_in":29.54,"precip_mm":0.0,"precip_in":0.0,"humidity":60,"cloud":100,"feelslike_c":2.1,"feelslike_f":35.7,"vis_km":16.0,"vis_miles":9.0,"uv":3.0,"gust_mph":31.8,"gust_kph":51.1}}	
+
+
+irb(main):422:0> result[:location]
+=>
+{:name=>"Rocky Point",
+ :region=>"New York",
+ :country=>"USA",
+ :lat=>40.95,
+ :lon=>-72.94,
+ :tz_id=>"America/New_York",
+ :localtime_epoch=>1674753068,
+ :localtime=>"2023-01-26 12:11"}
+------------------------------------------------------------------
+ irb(main):423:0> result[:current]
+=>
+{:last_updated_epoch=>1674752400,
+ :last_updated=>"2023-01-26 12:00",
+ :temp_c=>7.2,
+ :temp_f=>45.0,
+ :is_day=>1,
+ :condition=>{:text=>"Overcast", :icon=>"//cdn.weatherapi.com/weather/64x64/day/122.png", :code=>1009},
+ :wind_mph=>13.6,
+ :wind_kph=>22.0,
+ :wind_degree=>260,
+ :wind_dir=>"W",
+ :pressure_mb=>1000.0,
+ :pressure_in=>29.54,
+ :precip_mm=>0.0,
+ :precip_in=>0.0,
+ :humidity=>60,
+ :cloud=>100,
+ :feelslike_c=>2.1,
+ :feelslike_f=>35.7,
+ :vis_km=>16.0,
+ :vis_miles=>9.0,
+ :uv=>3.0,
+ :gust_mph=>31.8,
+ :gust_kph=>51.1}
+------------------------------------------------------------------
+ irb(main):427:0> result[:current][:condition]
+=> {:text=>"Overcast", :icon=>"//cdn.weatherapi.com/weather/64x64/day/122.png", :code=>1009}
+------------------------------------------------------------------
+
+irb(main):435:0> result[:current][:temp_c]
+=> 7.2
+
+
+
+
+01.27.2023_1312
+_search results partial begin
+Humidity 59
+
+Temp 39.9
+
+Wind mph 11.9
+
+Cached: #<WeatherReport:0x0000016380617a58>
+_search results partial end
+
+todo - 
+create a table in xxx and populate via cached dataset

@@ -1,0 +1,22 @@
+
+<%= form_for @weather_report do |f| %>
+
+    <div class="field">
+       <%= f.label :zip_code %>
+       <%= f.text_field :zip_code %>
+    </div>
+    
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>    
+
+
+
+# create_table "weather_caches", force: :cascade do |t|
+#     t.string "response_text"
+#     t.string "zip_code"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#   end
