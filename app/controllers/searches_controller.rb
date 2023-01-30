@@ -3,9 +3,7 @@ class SearchesController < ApplicationController
   require 'uri'
   require 'net/http'
 
-  def new #init
-
-    p "init() params are: #{params}"
+  def new 
     render :search
   end  
 
