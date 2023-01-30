@@ -1,16 +1,15 @@
-<h1> _search results partial begin</h1>
 
 <h3> Current Conditions </h3>
-Name:  <%=@location_name %>
+Name:  <%=@location_name %><br>
 
 
 <p>Humidity: <%=@humidity %> <br>
 Temp:  <%=@temp_f %> <br>
 Wind: mph <%=@wind_mph %>
 
-</p>
 
-<h1>Cached Weather Reports</h1>
+
+<h3>Cached Weather Reports</h3>
 <div class="row">
   <div class="col-md-6">
     <div class="container">
@@ -23,7 +22,7 @@ Wind: mph <%=@wind_mph %>
           <th>Temp(f)</th>
           <th>Wind Speed</th>
           <th>Zip Code</th>
-          <th>Location/th>
+          <th>Location</th>
           <th>Created At</th>
           <th>Updated At</th>
         </tr>
@@ -47,9 +46,3 @@ Wind: mph <%=@wind_mph %>
   </div>
 </div>
 <br>
-
-
-
-
-
-<h1> _search results partial end </h1>

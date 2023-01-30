@@ -1,8 +1,5 @@
 <%= form_tag searches_path, method: :post do %>
-    <%#= Your input tags %>
-    
-    <h1>zip</h1>
-    <button>submit</button>
+    <h2>Please enter zipcode: </h2>
     <%= text_field_tag(:zip)%>
     <%= submit_tag("Search")%>
 <% end %>
