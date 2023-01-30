@@ -5,6 +5,8 @@ class WeatherReport < ApplicationRecord
     self.where(WeatherReport.arel_table[:created_at].gt(30.minutes.ago))
         .where("zip_code = #{zip_code}")
         .select(:id, :zip_code, :created_at, :updated_at, :response_text, :humidity, :temp_f, :wind_mph, :location_name)
+        .order(id: :desc)
+        .drop(1)
   end
 
 end
